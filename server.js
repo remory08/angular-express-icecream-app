@@ -59,6 +59,11 @@ apiRouter.route('/icecreams/:icecreamId')
 
 app.use('/', apiRouter);
 
+// ROOT
+app.get('/', function(req,res){
+  res.render('index.ejs');
+});
+
 PORT = 3001
 
 app.listen(PORT,function(){
